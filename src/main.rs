@@ -1,13 +1,13 @@
 use crossterm::event::{self, Event, KeyCode, KeyEventKind, KeyModifiers};
 use std::sync::Arc;
 use std::time::{Duration, Instant};
-use visualizer::color::Lab;
-use visualizer::mpris::{self, Art, Cover};
-use visualizer::palette::{self, Blend, STOPS};
-use visualizer::render::grid::Grid;
-use visualizer::render::modes::{Kind, Modes};
-use visualizer::render::{self, CoverBox, Layout};
-use visualizer::{analyzer, audio, kitty, term};
+use coda::color::Lab;
+use coda::mpris::{self, Art, Cover};
+use coda::palette::{self, Blend, STOPS};
+use coda::render::grid::Grid;
+use coda::render::modes::{Kind, Modes};
+use coda::render::{self, CoverBox, Layout};
+use coda::{analyzer, audio, kitty, term};
 
 /// 90 fps: на мониторе 180 Гц каждый кадр ровно на два обновления экрана.
 const FPS: f64 = 90.0;
@@ -17,7 +17,7 @@ const MISSING_ART_GRACE: Duration = Duration::from_millis(600);
 
 fn main() {
     if let Err(e) = run() {
-        eprintln!("visualizer: {e}");
+        eprintln!("coda: {e}");
         std::process::exit(1);
     }
 }
@@ -41,7 +41,7 @@ fn cell_aspect() -> f32 {
 }
 
 /// Цвет текста из палитры, но не темнее `min_l`, чтобы читался на тёмном фоне.
-fn text_color(c: Lab, min_l: f32) -> visualizer::color::Rgb {
+fn text_color(c: Lab, min_l: f32) -> coda::color::Rgb {
     Lab { l: c.l.max(min_l), ..c }.into_gamut().to_rgb()
 }
 

@@ -1,3 +1,6 @@
+//! coda — COver-Driven Audio visualizer: спектр в терминале Kitty,
+//! раскрашенный палитрой обложки текущего трека.
+
 pub mod analyzer;
 pub mod audio;
 pub mod color;

@@ -70,7 +70,7 @@ impl Capture {
                 "--raw",
                 // без этого parec копит буфер и картинка запаздывает
                 "--latency-msec=10",
-                "--client-name=visualizer",
+                "--client-name=coda",
                 "--stream-name=spectrum",
             ])
             .stdin(Stdio::null())

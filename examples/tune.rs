@@ -3,8 +3,8 @@
 //! burst — окно прыгает пачками, как отдаёт parec; smooth — через Playhead;
 //! sweep — перебор параметров движения (через Playhead).
 
-use visualizer::analyzer::{Analyzer, Motion, FFT_SIZE};
-use visualizer::audio::{Playhead, SAMPLE_RATE};
+use coda::analyzer::{Analyzer, Motion, FFT_SIZE};
+use coda::audio::{Playhead, SAMPLE_RATE};
 
 const BANDS: usize = 62;
 const WARMUP_S: f64 = 1.0;

@@ -1,7 +1,7 @@
 //! Слушает Strawberry и печатает события: cargo run --release --example mpris_probe -- [секунд]
 use std::time::{Duration, Instant};
-use visualizer::color::Rgb;
-use visualizer::mpris::{self, Art, Event};
+use coda::color::Rgb;
+use coda::mpris::{self, Art, Event};
 
 fn main() {
     let secs: u64 = std::env::args().nth(1).map_or(3, |s| s.parse().unwrap());

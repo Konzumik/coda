@@ -2,8 +2,8 @@
 //! cargo run --release --example palette_preview -- out.png обложка1.jpg обложка2.jpg …
 
 use image::{Rgb as Px, RgbImage, imageops::FilterType};
-use visualizer::color::Rgb;
-use visualizer::palette;
+use coda::color::Rgb;
+use coda::palette;
 
 const ROW: u32 = 120;
 const SWATCH: u32 = 90;

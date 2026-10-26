@@ -3,13 +3,13 @@
 //! cargo run --release --example snapshot -- <запись.raw> <обложка.jpg> <out.png> [секунда]
 
 use image::{Rgb as Px, RgbImage, imageops::FilterType};
-use visualizer::analyzer::{Analyzer, FFT_SIZE};
-use visualizer::audio::{Playhead, SAMPLE_RATE};
-use visualizer::color::Rgb;
-use visualizer::palette::{self, Blend};
-use visualizer::render::Layout;
-use visualizer::render::grid::Grid;
-use visualizer::render::modes::{Kind, Modes};
+use coda::analyzer::{Analyzer, FFT_SIZE};
+use coda::audio::{Playhead, SAMPLE_RATE};
+use coda::color::Rgb;
+use coda::palette::{self, Blend};
+use coda::render::Layout;
+use coda::render::grid::Grid;
+use coda::render::modes::{Kind, Modes};
 
 const COLS: u16 = 110;
 const ROWS: u16 = 34;
@@ -85,7 +85,7 @@ fn main() {
     println!("→ {out}");
 }
 
-fn cell(img: &mut RgbImage, cx: u32, cy: u32, c: visualizer::render::grid::Cell, _bright: f32) {
+fn cell(img: &mut RgbImage, cx: u32, cy: u32, c: coda::render::grid::Cell, _bright: f32) {
     let (x0, y0) = (cx * CW, cy * CH);
     let px = |c: Rgb| Px([c.0, c.1, c.2]);
     let rect = |img: &mut RgbImage, x: u32, y: u32, w: u32, h: u32, col: Px<u8>| {

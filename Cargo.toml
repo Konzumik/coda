@@ -1,5 +1,6 @@
 [package]
-name = "visualizer"
+name = "coda"
+description = "COver-Driven Audio visualizer: спектр в Kitty в цветах обложки текущего трека"
 version = "0.1.0"
 edition = "2024"
 
