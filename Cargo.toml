@@ -1,0 +1,12 @@
+[package]
+name = "visualizer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+base64 = "0.23.1"
+crossterm = "0.29.0"
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png"] }
+rustfft = "6.4.1"
+unicode-width = "0.2.2"
+zbus = "5"
