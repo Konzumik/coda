@@ -5,7 +5,7 @@ use coda::mpris::{self, Art, Event};
 
 fn main() {
     let secs: u64 = std::env::args().nth(1).map_or(3, |s| s.parse().unwrap());
-    let player = std::env::var("VIS_PLAYER").unwrap_or_else(|_| "strawberry".into());
+    let player = std::env::var("CODA_PLAYER").unwrap_or_else(|_| "strawberry".into());
     let rx = mpris::spawn(&player);
     let end = Instant::now() + Duration::from_secs(secs);
     while let Some(left) = end.checked_duration_since(Instant::now()) {

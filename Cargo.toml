@@ -1,6 +1,11 @@
 [package]
 name = "coda"
-description = "COver-Driven Audio visualizer: спектр в Kitty в цветах обложки текущего трека"
+description = "COver-Driven Audio visualizer: a Kitty terminal spectrum painted in the colors of the current album art"
+license = "MIT"
+repository = "https://github.com/Konzumik/coda"
+readme = "README.md"
+keywords = ["audio", "visualizer", "terminal", "kitty", "mpris"]
+categories = ["command-line-utilities", "multimedia::audio"]
 version = "0.1.0"
 edition = "2024"
 

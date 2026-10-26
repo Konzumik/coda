@@ -47,7 +47,7 @@ fn text_color(c: Lab, min_l: f32) -> coda::color::Rgb {
 
 fn run() -> std::io::Result<()> {
     let mut audio = audio::Capture::start()?;
-    let player = std::env::var("VIS_PLAYER").unwrap_or_else(|_| "strawberry".into());
+    let player = std::env::var("CODA_PLAYER").unwrap_or_else(|_| "strawberry".into());
     let media = mpris::spawn(&player);
     let graphics = kitty::supported();
     let mut term = term::Term::enter()?;
