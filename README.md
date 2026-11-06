@@ -50,6 +50,17 @@ Tested on Fedora 44, Hyprland, Kitty 0.47.1, PipeWire 1.6.8.
 
 ## Install
 
+### Arch Linux (AUR)
+
+```sh
+yay -S coda-visualizer   # or paru -S coda-visualizer
+```
+
+The package is called `coda-visualizer` (the name `coda` is taken on the AUR);
+the command is still `coda`.
+
+### From source
+
 ```sh
 git clone https://github.com/Konzumik/coda
 cd coda
